@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: "Inter", "Outfit", "Young Serif", "sans-serif";
+    font-family: "Inter", "sans-serif";
     background-color: var(--Grey900);
     text-align: center;
     width: 100%;
@@ -34,7 +34,7 @@ body {
     width: 100%;
     max-width: 400px;
     background-color: var(--Grey800);
-    padding: 35px;
+    padding: 2vw;
     border-radius: 10px;
 }
 
@@ -73,14 +73,32 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 20px;
     justify-self: stretch;
     width: 100%;
     margin-bottom: 30px;
-    
 }
 
-.links a {
+.social-links {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.social-links li {
+    list-style: none;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.social-links a {
     background-color: var(--Grey700);
     display: flex;
     justify-content: center;
@@ -90,33 +108,42 @@ body {
     border-radius: 8px;
     text-decoration: none;
     color: var(--White);
-    transition: background-color 0.5s, width 0.5s;
+    transition: background-color 0.5s, text-shadow 0.3s, box-shadow 0.3s;
 }
 
-.links a:hover {
-    width: 300px;
-    transition-timing-function: linear;
+.social-links a:hover {
     background-color: var(--Grey600);
+    text-shadow: 0 0 10px var(--Green), 0 0 20px var(--Green);
+    box-shadow: 0 0 15px var(--Green);
     font-weight: 900;
-    text-shadow: 0 0 8px var(--Green);
 }
 
-.attribution {
+footer {
     text-align: center;
     text-decoration: none;
     margin: 2px;
     color: var(--Grey600);
+    font-size: 0.6rem;
 }
 
-.attribution a {
+footer a {
     text-decoration: none;
-    color: var(--Grey600);
-    transition: font-size 0.5s;
+    color: var(--Grey600); 
+    transition: color 0.3s, font-size 0.3s;
+    font-size: 0.6rem;
 }
 
-.attribution a:hover {
-    font-size: 1.2rem;
+footer a:hover {
     color: var(--White);
+    font-size: 0.7rem;
+}
+
+footer a:visited {
+    color: var(--White);
+}
+
+footer a:link {
+    color: var(--Grey600);
 }
 
 @media screen and (max-width: 375px) {
